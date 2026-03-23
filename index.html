@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Мария Кондрашкина — Бренд-менеджер</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#FAF8F5;--card:#FFF;--text:#2A2A2A;--muted:#6B6560;--accent:#C4956A;--accentDk:#A07850;--accentLt:#E8D5C0;--glow:rgba(196,149,106,.15);--border:#E8E2DB;--heading:#1A1A1A;--serif:'Cormorant Garamond',Georgia,serif;--sans:'Manrope',-apple-system,sans-serif}
+html{scroll-behavior:smooth}body{font-family:var(--sans);background:var(--bg);color:var(--text);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(250,248,245,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}.nav-inner{max-width:1200px;margin:0 auto;padding:0 2rem;height:56px;display:flex;align-items:center;justify-content:space-between}.nav-logo{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--heading)}.nav-links{display:flex;gap:1.8rem;list-style:none}.nav-links a{font-size:.75rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:.08em;text-transform:uppercase;transition:color .3s}.nav-links a:hover{color:var(--accentDk)}
+.burger{display:none;background:none;border:none;cursor:pointer;padding:4px;z-index:200}.burger span{display:block;width:24px;height:2px;background:var(--heading);margin:5px 0;transition:all .3s}.burger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}.burger.open span:nth-child(2){opacity:0}.burger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.mobile-menu{display:none;position:fixed;top:56px;left:0;right:0;background:rgba(250,248,245,.97);backdrop-filter:blur(20px);padding:1.5rem 2rem;border-bottom:1px solid var(--border);z-index:99}.mobile-menu.open{display:block}.mobile-menu a{display:block;font-size:.85rem;font-weight:500;color:var(--muted);text-decoration:none;letter-spacing:.06em;text-transform:uppercase;padding:.75rem 0;border-bottom:1px solid var(--border);transition:color .3s}.mobile-menu a:last-child{border:none}.mobile-menu a:hover{color:var(--accentDk)}
+section{padding:5rem 2rem}.container{max-width:1000px;margin:0 auto}.slabel{font-size:.7rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--accentDk);margin-bottom:.8rem}.stitle{font-family:var(--serif);font-size:clamp(1.8rem,4vw,2.6rem);font-weight:500;color:var(--heading);margin-bottom:2.5rem;line-height:1.2}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:7rem 2rem 5rem;position:relative;overflow:hidden}.hero::before{content:'';position:absolute;top:-20%;right:-10%;width:600px;height:600px;background:radial-gradient(circle,var(--glow) 0%,transparent 70%);border-radius:50%;pointer-events:none}.hero-layout{max-width:1100px;display:grid;grid-template-columns:1fr 300px;grid-template-rows:auto 1fr;gap:1rem 3.5rem;align-items:start}.hero-heading{grid-column:1;grid-row:1}.hero-body{grid-column:1;grid-row:2}.hero-photo{grid-column:2;grid-row:1/3;align-self:center}.hero-label{display:inline-block;font-size:.7rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:var(--accentDk);border:1px solid var(--accentLt);padding:.45rem 1.3rem;border-radius:100px;margin-bottom:2rem}.hero h1{font-family:var(--serif);font-size:clamp(2.4rem,5vw,3.8rem);font-weight:500;color:var(--heading);line-height:1.15;margin-bottom:1.2rem}.hero h1 em{font-style:italic;color:var(--accentDk)}.hero-summary{font-size:1rem;color:var(--muted);max-width:580px;line-height:1.8;margin-bottom:2rem}.hero-stats{display:flex;gap:2.5rem;flex-wrap:wrap}.stat-number{font-family:var(--serif);font-size:2.2rem;font-weight:600;color:var(--accentDk);line-height:1.2}.stat-label{font-size:.72rem;font-weight:500;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:.2rem}.hero-photo{position:relative}.hero-photo img{width:100%;max-width:300px;border-radius:18px;object-fit:cover;aspect-ratio:3/4;box-shadow:0 16px 50px rgba(0,0,0,.1)}.hero-photo::after{content:'';position:absolute;top:10px;left:10px;width:100%;height:100%;max-width:300px;aspect-ratio:3/4;border:2px solid var(--accentLt);border-radius:18px;z-index:-1}
+.ach-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem}.ach-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:transform .3s,box-shadow .3s;position:relative;overflow:hidden}.ach-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent),var(--accentLt));opacity:0;transition:opacity .3s}.ach-card:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(0,0,0,.05)}.ach-card:hover::before{opacity:1}.ach-icon{font-size:1.2rem;margin-bottom:1rem}.ach-card h3{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--heading);margin-bottom:.6rem;line-height:1.3}.ach-card p{font-size:.87rem;color:var(--muted);line-height:1.7}
+.exp-block{background:var(--card);border:1px solid var(--border);border-radius:18px;padding:2.5rem;margin-bottom:1.5rem}.exp-header{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:.8rem;margin-bottom:1.2rem;padding-bottom:1.2rem;border-bottom:1px solid var(--border)}.exp-company{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--heading)}.exp-role{font-size:.95rem;color:var(--accentDk);font-weight:500;margin-top:.2rem}.exp-period{font-size:.78rem;font-weight:500;color:var(--muted);background:var(--glow);padding:.35rem .9rem;border-radius:100px;white-space:nowrap}.exp-intro{font-size:.92rem;color:var(--muted);margin-bottom:1.5rem;line-height:1.8}.exp-areas{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}.exp-area h4{font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--accentDk);margin-bottom:.6rem;padding-bottom:.4rem;border-bottom:1px solid var(--accentLt)}.exp-area p{font-size:.85rem;color:var(--muted);line-height:1.7}
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem}.sk-group h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--heading);margin-bottom:.8rem}.sk-tags{display:flex;flex-wrap:wrap;gap:.4rem}.sk-tag{font-size:.78rem;font-weight:500;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:.35rem .75rem;border-radius:100px;transition:all .3s}.sk-tag:hover{border-color:var(--accent);color:var(--accentDk);background:var(--glow)}
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.2rem}.edu-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:1.8rem}.edu-card h3{font-family:var(--serif);font-size:1.1rem;font-weight:600;color:var(--heading);margin-bottom:.3rem}.edu-det{font-size:.87rem;color:var(--muted)}.edu-yr{font-size:.75rem;font-weight:600;color:var(--accentDk);margin-top:.6rem}.exh-row{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:.8rem}.exh-badge{font-size:.82rem;font-weight:500;color:var(--heading);background:var(--card);border:1px solid var(--border);padding:.5rem 1rem;border-radius:10px}.exh-badge span{font-size:.72rem;color:var(--accentDk);font-weight:600}
+.pf-sub-title{font-family:var(--serif);font-size:1.4rem;font-weight:600;color:var(--heading);margin-bottom:1.2rem;margin-top:2.5rem}.pf-sub-title:first-of-type{margin-top:0}.pf-slides{display:flex;gap:1rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:.5rem}.pf-slides::-webkit-scrollbar{display:none}.pf-slide{flex:0 0 auto;scroll-snap-align:start;width:200px;border-radius:12px;overflow:hidden;border:1px solid var(--border);transition:transform .3s,box-shadow .3s;cursor:pointer}.pf-slide:hover{transform:translateY(-3px);box-shadow:0 8px 28px rgba(0,0,0,.08)}.pf-slide img{width:100%;height:auto;display:block}.pf-hint{text-align:center;margin-top:.8rem;font-size:.75rem;color:var(--muted)}.pf-placeholder{background:var(--card);border:2px dashed var(--border);border-radius:14px;padding:2.5rem;text-align:center;color:var(--muted);font-size:.9rem;margin-top:.5rem}
+.lb{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.88);z-index:10000;align-items:center;justify-content:center;cursor:pointer;backdrop-filter:blur(10px)}.lb.on{display:flex}.lb img{max-height:90vh;max-width:90vw;border-radius:10px;box-shadow:0 20px 60px rgba(0,0,0,.4)}.lb-x{position:absolute;top:1.2rem;right:1.2rem;font-size:1.8rem;color:#FFF;cursor:pointer;width:44px;height:44px;display:flex;align-items:center;justify-content:center;background:rgba(255,255,255,.1);border-radius:50%;border:none;transition:background .3s}.lb-x:hover{background:rgba(255,255,255,.2)}
+.contact{background:var(--heading);color:#FFF;text-align:center;padding:5rem 2rem}.contact .slabel{color:var(--accent)}.contact .stitle{color:#FFF}.contact-text{font-size:1rem;color:rgba(255,255,255,.6);max-width:480px;margin:0 auto 1.8rem;line-height:1.8}.contact-links{display:flex;justify-content:center;gap:1.2rem;flex-wrap:wrap}.contact-link{font-size:.82rem;font-weight:500;color:#FFF;text-decoration:none;border:1px solid rgba(255,255,255,.2);padding:.65rem 1.5rem;border-radius:100px;transition:all .3s}.contact-link:hover{background:var(--accentDk);border-color:var(--accentDk)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+@media(max-width:1024px){.hero-layout{gap:2.5rem}.hero h1{font-size:2.6rem}.hero-stats{gap:1.8rem}.exp-areas{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}.sk-grid{grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}}
+@media(max-width:768px){.nav-links{display:none}.burger{display:block}.hero{padding:6rem 1.5rem 3rem}.hero::before{display:none}.hero-layout{grid-template-columns:1fr;grid-template-rows:auto auto auto;gap:1.5rem;max-width:100%}.hero-heading{grid-column:1;grid-row:1;text-align:center}.hero-photo{grid-column:1;grid-row:2;text-align:center}.hero-photo img{max-width:220px;margin:0 auto}.hero-photo::after{display:none}.hero-body{grid-column:1;grid-row:3;text-align:left}.hero-body .hero-summary{margin:0 0 1.2rem}.hero-body .hero-stats{display:grid;grid-template-columns:1fr 1fr;gap:1rem;justify-content:start}.stat{text-align:left}.stat-number{font-size:1.8rem}section{padding:3rem 1.5rem}.slabel{margin-bottom:.6rem}.stitle{margin-bottom:2rem}.exp-block{padding:1.5rem;margin-bottom:1.2rem}.exp-areas{grid-template-columns:1fr;gap:1rem}.exp-area{margin-bottom:0}.ach-grid{grid-template-columns:1fr;gap:1rem}.sk-grid{grid-template-columns:1fr;gap:1.2rem}.edu-grid{grid-template-columns:1fr;gap:1rem}.pf-slide{width:160px}.pf-sub-title{margin-top:2rem}.contact-links{flex-direction:column;align-items:center;gap:.8rem}.exh-row{justify-content:flex-start}}
+@media(max-width:480px){.hero{padding:5rem 1rem 2rem}.hero h1{font-size:1.8rem}.hero-photo img{max-width:180px}.hero-body .hero-stats{gap:.8rem}.stat-number{font-size:1.4rem}.stat-label{font-size:.63rem}section{padding:2.5rem 1rem}.stitle{font-size:1.5rem;margin-bottom:1.5rem}.exp-block{padding:1.2rem}.ach-card{padding:1.3rem}.pf-slide{width:140px}.pf-sub-title{font-size:1.15rem;margin-top:1.5rem}}
+</style>
+</head>
+<body>
+<nav><div class="nav-inner"><div class="nav-logo">МК</div><ul class="nav-links"><li><a href="#achievements">Достижения</a></li><li><a href="#experience">Опыт</a></li><li><a href="#skills">Навыки</a></li><li><a href="#education">Образование</a></li><li><a href="#portfolio">Портфолио</a></li><li><a href="#contact">Контакты</a></li></ul><button class="burger" id="burger" onclick="toggleMenu()"><span></span><span></span><span></span></button></div></nav>
+<div class="mobile-menu" id="mobileMenu">
+<a href="#achievements" onclick="closeMenu()">Достижения</a>
+<a href="#experience" onclick="closeMenu()">Опыт</a>
+<a href="#skills" onclick="closeMenu()">Навыки</a>
+<a href="#education" onclick="closeMenu()">Образование</a>
+<a href="#portfolio" onclick="closeMenu()">Портфолио</a>
+<a href="#contact" onclick="closeMenu()">Контакты</a>
+</div>
+
+<section class="hero"><div class="hero-layout">
+<div class="hero-heading">
+<div class="hero-label">Beauty & Skincare</div>
+<h1>Мария Кондрашкина<br><em>Бренд-менеджер</em></h1>
+</div>
+<div class="hero-photo"><img src="images/photo.jpg" alt="Мария Кондрашкина">
+<a href="#contact" style="display:block;margin:1.5rem auto 0;text-align:center;font-size:.85rem;font-weight:600;color:#FFF;background:var(--accentDk);padding:.75rem 2rem;border-radius:100px;text-decoration:none;transition:background .3s;letter-spacing:.03em;max-width:300px">Связаться со мной</a>
+</div>
+<div class="hero-body">
+<p class="hero-summary">3+ года в управлении ритейл-брендом и продуктовым портфелем в сегменте уходовой косметики на стороне дистрибьютора корейских брендов. Выстроила бренд-систему с нуля — от нейминга и айдентики до контент-стратегии и работы с инфлюенсерами. Вывела на российский рынок 5 международных брендов, построила портфель из 250 SKU.</p>
+<p class="hero-summary">Умение находить тренды раньше рынка: ранний заход в категорию микроигольных средств дал +30% к выручке направления за полгода. Опыт запуска продуктов на новый рынок, управления P&L и кросс-функциональной командой.</p>
+<div class="hero-stats">
+<div class="stat"><div class="stat-number">250</div><div class="stat-label">SKU в портфеле</div></div>
+<div class="stat"><div class="stat-number">5</div><div class="stat-label">Брендов на рынке РФ</div></div>
+<div class="stat"><div class="stat-number">+30%</div><div class="stat-label">Выручка за полгода (микроиглы)</div></div>
+<div class="stat"><div class="stat-number">Топ-1%</div><div class="stat-label">Продавцов на Ozon</div></div>
+</div>
+</div>
+</div></section>
+
+<section id="achievements"><div class="container">
+<div class="slabel reveal">Результаты</div><h2 class="stitle reveal">Ключевые достижения</h2>
+<div class="ach-grid">
+<div class="ach-card reveal"><div class="ach-icon">📦</div><h3>Продуктовый портфель</h3><p>250 SKU с постоянной ABC/XYZ-ротацией. Доля неэффективных позиций — не более 10%.</p></div>
+<div class="ach-card reveal"><div class="ach-icon">🇰🇷</div><h3>5 брендов на рынке РФ</h3><p>Isntree, Mixsoon, Celimax, VT Cosmetics + 1 под NDA. Для двух — второй официальный импортёр.</p></div>
+<div class="ach-card reveal"><div class="ach-icon">🔬</div><h3>Ранний заход в тренд</h3><p>Выявила тренд на микроигольные формулы раньше конкурентов → +30% к выручке направления за полгода.</p></div>
+<div class="ach-card reveal"><div class="ach-icon">📈</div><h3>Рост маржинальности</h3><p>Инициировала переход на прямые контракты → маржинальность с ~10% до ~30%.</p></div>
+<div class="ach-card reveal"><div class="ach-icon">✈️</div><h3>Бизнес-миссия в Корею</h3><p>Выставки, визиты на производства, переговоры с брендами → долгосрочные партнёрства.</p></div>
+<div class="ach-card reveal"><div class="ach-icon">🎯</div><h3>D2C-стратегия</h3><p>Сегментация ЦА, CJM, конкурентная отстройка, продуктовая линейка.</p></div>
+</div></div></section>
+
+<section id="experience" style="background:linear-gradient(180deg,#F5F1EC 0%,var(--bg) 100%)"><div class="container">
+<div class="slabel reveal">Карьера</div><h2 class="stitle reveal">Опыт работы</h2>
+<div class="exp-block reveal"><div class="exp-header"><div><div class="exp-company">Импортёр и дистрибьютор корейской косметики</div><div class="exp-role">Бренд-менеджер · Бренд Hottie</div></div><div class="exp-period">окт. 2022 — наст. время</div></div>
+<p class="exp-intro">Управление ритейл-брендом и продуктовым портфелем (до 250 SKU) в сегменте K-beauty skincare.</p>
+<div class="exp-areas">
+<div class="exp-area"><h4>Продукт и ассортимент</h4><p>Локализация и запуск продуктов на российский рынок полного цикла: от исследования и отбора до ценообразования, контента и вывода в продажу. Анализ спроса и конкурентной среды, скоринг и отбор брендов/SKU, формирование матрицы, управление жизненным циклом.</p></div>
+<div class="exp-area"><h4>Исследования</h4><p>Качественные и количественные исследования. Работа с исследованиями Nielsen и внедрение нововведений в проект. Анализ отзывов на корейском и английском, клинические данные от производителей. Мониторинг Olive Young, Amazon, зарубежных соцсетей. Конкурентный анализ, оценка ёмкости ниш.</p></div>
+<div class="exp-area"><h4>Ритейл-бренд</h4><p>Создание ритейл-бренда с нуля — нейминг, айдентика, бренд-бук, TOV. Brand consistency: контроль единства бренда во всех точках контакта — карточки маркетплейсов, социальные сети, промо-материалы, упаковка. Адаптация корейских брендов для российского рынка. Brand Health.</p></div>
+<div class="exp-area"><h4>Аналитика и экономика</h4><p>Управление P&L направления. Юнит-экономика по каждому SKU, расчёт COGS, ABC/XYZ-анализ. Бюджетирование маркетинга, план-факт анализ эффективности.</p></div>
+<div class="exp-area"><h4>Каналы продаж</h4><p>Ozon, Wildberries, Яндекс Маркет. Стимулирование повторных продаж через подписки на магазин — 12 500 подписчиков на Яндекс Маркете. Работа с отзывами и рейтингом. Стратегия выхода в D2C.</p></div>
+<div class="exp-area"><h4>Продвижение</h4><p>Управление рекламной стратегией — инициирование, контроль и оценка эффективности рекламных кампаний (внутренние инструменты маркетплейсов, таргетированная реклама). Руководство influence-направлением: стратегия, контроль отдела, анализ результатов.</p></div>
+<div class="exp-area"><h4>Управление и процессы</h4><p>Кросс-функциональное руководство командой из 8 человек (закупки, маркетинг, контент, дизайн, логистика). Постановка задач, контроль сроков, обучение сотрудников, выстраивание регламентов и процессов, делегирование операционных задач.</p></div>
+<div class="exp-area"><h4>Партнёрства и закупки</h4><p>Выход на ЛПР корейских брендов, переговоры на английском, заключение LOA и прямых контрактов, бизнес-миссия в Корею. Регуляторика: ЕАЭС, Честный Знак.</p></div>
+</div></div>
+<div class="exp-block reveal"><div class="exp-header"><div><div class="exp-company">K&T · Дистрибьютор товаров из Китая</div><div class="exp-role">Менеджер маркетплейса (Яндекс Маркет)</div></div><div class="exp-period">дек. 2021 — сент. 2022</div></div>
+<p class="exp-intro">Управление продажами и P&L на Яндекс Маркете: ценообразование, промо-акции, оптимизация ассортимента. Аналитика метрик (юнит-экономика, DRR, конверсия). Рекламные кампании, A/B-тестирование. ТЗ на контент, планирование поставок, работа с отзывами.</p>
+</div></div></section>
+
+<section id="skills"><div class="container">
+<div class="slabel reveal">Компетенции</div><h2 class="stitle reveal">Навыки</h2>
+<div class="sk-grid">
+<div class="sk-group reveal"><h3>Бренд и продукт</h3><div class="sk-tags"><span class="sk-tag">Стратегия бренда</span><span class="sk-tag">Позиционирование</span><span class="sk-tag">УТП</span><span class="sk-tag">Нейминг</span><span class="sk-tag">Айдентика</span><span class="sk-tag">TOV</span><span class="sk-tag">Управление портфелем</span><span class="sk-tag">Запуск новинок</span></div></div>
+<div class="sk-group reveal"><h3>Исследования и аналитика</h3><div class="sk-tags"><span class="sk-tag">Качественные исследования</span><span class="sk-tag">Количественные исследования</span><span class="sk-tag">Анализ рынка</span><span class="sk-tag">Международные отчёты</span><span class="sk-tag">Юнит-экономика</span><span class="sk-tag">ABC/XYZ</span><span class="sk-tag">P&L</span></div></div>
+<div class="sk-group reveal"><h3>E-commerce</h3><div class="sk-tags"><span class="sk-tag">Ozon</span><span class="sk-tag">Wildberries</span><span class="sk-tag">Яндекс Маркет</span><span class="sk-tag">SEO</span><span class="sk-tag">Контент карточек</span><span class="sk-tag">Реклама МП</span></div></div>
+<div class="sk-group reveal"><h3>Маркетинг</h3><div class="sk-tags"><span class="sk-tag">Контент-стратегия</span><span class="sk-tag">Influence-маркетинг</span><span class="sk-tag">Продуктовые съёмки</span><span class="sk-tag">Промо-материалы</span></div></div>
+<div class="sk-group reveal"><h3>Инструменты</h3><div class="sk-tags"><span class="sk-tag">Excel</span><span class="sk-tag">Яндекс Метрика</span><span class="sk-tag">SimilarWeb</span><span class="sk-tag">MPstats</span><span class="sk-tag">МойСклад</span><span class="sk-tag">1С</span><span class="sk-tag">Figma</span><span class="sk-tag">Canva</span></div></div>
+<div class="sk-group reveal"><h3>ИИ и автоматизация</h3><div class="sk-tags"><span class="sk-tag">Промпт-инжиниринг</span><span class="sk-tag">Генерация визуального контента</span><span class="sk-tag">Чат-боты</span><span class="sk-tag">Автоматизация отчётности</span><span class="sk-tag">Вайбкодинг</span><span class="sk-tag">ChatGPT</span><span class="sk-tag">Claude</span><span class="sk-tag">Perplexity</span><span class="sk-tag">Manus</span></div></div>
+<div class="sk-group reveal"><h3>Регуляторика</h3><div class="sk-tags"><span class="sk-tag">ЕАЭС</span><span class="sk-tag">Честный Знак</span><span class="sk-tag">Сертификация</span></div></div>
+</div></div></section>
+
+<section id="education" style="background:linear-gradient(180deg,var(--bg) 0%,#F5F1EC 100%)"><div class="container">
+<div class="slabel reveal">Образование</div><h2 class="stitle reveal">Образование и развитие</h2>
+<div class="edu-grid">
+<div class="edu-card reveal"><h3>Яндекс Практикум</h3><div class="edu-det">Бренд-менеджер</div><div class="edu-yr">2024</div></div>
+<div class="edu-card reveal"><h3>МФЮА</h3><div class="edu-det">Реклама и связи с общественностью (очно-заочно)</div><div class="edu-yr">2022 — 2027</div></div>
+<div class="edu-card reveal"><h3>Elpodium</h3><div class="edu-det">Маркетинговые стратегии с AI</div><div class="edu-yr">2025</div></div>
+</div>
+<div style="margin-top:2.5rem"><h3 class="reveal" style="font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--heading);margin-bottom:.4rem">Языки</h3><p class="reveal" style="color:var(--muted);font-size:.92rem">Русский — родной · Английский — B2 (переговоры с международными партнёрами, анализ зарубежных источников)</p></div>
+<div style="margin-top:2.5rem"><h3 class="reveal" style="font-family:var(--serif);font-size:1.3rem;font-weight:500;color:var(--heading);margin-bottom:.8rem">Профильные выставки</h3><div class="exh-row reveal"><div class="exh-badge">InterCHARM Россия <span>2022 · 2023 · 2024</span></div><div class="exh-badge">InterCHARM Корея <span>2024</span></div><div class="exh-badge">K-Beauty Expo <span>2024</span></div><div class="exh-badge">UpakExpo</div></div></div>
+</div></section>
+
+<section id="portfolio"><div class="container">
+<div class="slabel reveal">Портфолио</div><h2 class="stitle reveal">Бренд в действии</h2>
+
+<h3 class="pf-sub-title reveal">Инфографика для маркетплейсов</h3>
+<div class="pf-slides reveal">
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p1_1.jpg" alt="Celimax Retinol 1"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p1_2.jpg" alt="Celimax Retinol 2"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p1_3.jpg" alt="Celimax Retinol 3"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p1_4.jpg" alt="Celimax Retinol 4"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p2_1.jpg" alt="Celimax Oil Control 1"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p2_2.jpg" alt="Celimax Oil Control 2"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p2_3.jpg" alt="Celimax Oil Control 3"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p2_4.jpg" alt="Celimax Oil Control 4"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p3_1.jpg" alt="Isntree Booster 1"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p3_2.jpg" alt="Isntree Booster 2"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p3_3.jpg" alt="Isntree Booster 3"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/p3_4.jpg" alt="Isntree Booster 4"></div>
+</div>
+<div class="pf-hint">← листайте →</div>
+
+<h3 class="pf-sub-title reveal">Оформление магазина на маркетплейсах</h3>
+<div style="display:flex;flex-direction:column;gap:.5rem;max-width:960px;margin-top:.5rem" class="reveal">
+<div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLB(this)"><img src="images/shop_01.jpg" alt="Баннер магазина 1" style="width:100%;display:block"></div>
+<div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLB(this)"><img src="images/shop_02.jpg" alt="Баннер магазина 2" style="width:100%;display:block"></div>
+<div style="border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer" onclick="openLB(this)"><img src="images/shop_03.jpg" alt="Витрина магазина" style="width:100%;display:block"></div>
+</div>
+
+<h3 class="pf-sub-title reveal">Упаковка для заказов</h3>
+<div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:.5rem" class="reveal">
+<div style="flex:1;min-width:280px;border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:transform .3s,box-shadow .3s" onclick="openLB(this)" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><img src="images/pack_01.jpg" alt="Упаковка Hottie 1" style="width:100%;display:block"></div>
+<div style="flex:1;min-width:280px;border-radius:12px;overflow:hidden;border:1px solid var(--border);cursor:pointer;transition:transform .3s,box-shadow .3s" onclick="openLB(this)" onmouseover="this.style.transform='translateY(-3px)';this.style.boxShadow='0 8px 28px rgba(0,0,0,.08)'" onmouseout="this.style.transform='';this.style.boxShadow=''"><img src="images/pack_02.jpg" alt="Упаковка Hottie 2" style="width:100%;display:block"></div>
+</div>
+
+<h3 class="pf-sub-title reveal">Модельная фотосъёмка</h3>
+<div class="pf-slides reveal">
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_01.jpg" alt="Съёмка 1"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_02.jpg" alt="Съёмка 2"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_03.jpg" alt="Съёмка 3"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_04.jpg" alt="Съёмка 4"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_05.jpg" alt="Съёмка 5"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_06.jpg" alt="Съёмка 6"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_07.jpg" alt="Съёмка 7"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_08.jpg" alt="Съёмка 8"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/shoot_09.jpg" alt="Съёмка 9"></div>
+</div>
+<div class="pf-hint">← листайте →</div>
+
+<h3 class="pf-sub-title reveal">Социальные сети</h3>
+<div class="pf-slides reveal">
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_01.jpg" alt="SMM 1"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_02.jpg" alt="SMM 2"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_03.jpg" alt="SMM 3"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_04.jpg" alt="SMM 4"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_05.jpg" alt="SMM 5"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_06.jpg" alt="SMM 6"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_07.jpg" alt="SMM 7"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_08.jpg" alt="SMM 8"></div>
+<div class="pf-slide" onclick="openLB(this)"><img src="images/sm_09.jpg" alt="SMM 9"></div>
+</div>
+<div class="pf-hint">← листайте →</div>
+</div></section>
+
+<section class="contact" id="contact"><div class="container">
+<div class="slabel">Связаться</div><h2 class="stitle">Давайте обсудим сотрудничество</h2>
+<p class="contact-text">Открыта к предложениям в сфере бренд-менеджмента и продуктового управления в beauty-индустрии</p>
+<div class="contact-links"><a href="mailto:kondrashkina.business@mail.ru" class="contact-link">Email</a><a href="https://t.me/GloryToMaria" class="contact-link">Telegram</a><a href="tel:+79939250403" class="contact-link">+7 993 925-04-03</a><a href="https://max.ru/u/f9LHodD0cOIgRdSZ8hHjYLmI-jevSjqiut-q5gh9VTPd2XW8zopawLFs6ak" class="contact-link">Max</a></div>
+</div></section>
+
+<div class="lb" id="lb" onclick="closeLB(event)"><button class="lb-x" onclick="closeLB(event)">&times;</button><img id="lb-img" src=""></div>
+
+<script>
+var obs=new IntersectionObserver(function(entries){entries.forEach(function(entry,i){if(entry.isIntersecting){setTimeout(function(){entry.target.classList.add('visible')},i*60);obs.unobserve(entry.target)}})},{threshold:.1,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(function(el){obs.observe(el)});
+function openLB(el){var img=el.querySelector('img');document.getElementById('lb-img').src=img.src;document.getElementById('lb').classList.add('on');document.body.style.overflow='hidden'}
+function closeLB(e){if(e.target.id==='lb'||e.target.classList.contains('lb-x')){document.getElementById('lb').classList.remove('on');document.body.style.overflow=''}}
+document.addEventListener('keydown',function(e){if(e.key==='Escape'){document.getElementById('lb').classList.remove('on');document.body.style.overflow=''}});
+function toggleMenu(){document.getElementById('burger').classList.toggle('open');document.getElementById('mobileMenu').classList.toggle('open')}
+function closeMenu(){document.getElementById('burger').classList.remove('open');document.getElementById('mobileMenu').classList.remove('open')}
+</script>
+</body></html>
